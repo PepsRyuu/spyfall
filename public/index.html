@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spyfall</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="page" data-name="connect" data-active>
+        Connecting to game...
+    </div>
+    <div class="page" data-name="join">
+        <h1>Spyfall</h1>
+        <p>Please Enter Your Name</p>
+        <p><input type="text"></p>
+        <p><button onclick="GameApp.join()">Join</button></p>
+    </div>
+    <div class="page" data-name="lobby">
+        <h1>Lobby</h1>
+        <div><button onclick="GameApp.start()">Start Game</button></div>
+        <div class="players list"></div>
+    </div>
+    <div class="page" data-name="game">
+        <h1 class="timer">00:00</h1>
+        <div class="players list"></div>
+        <h2>Location</h2>
+        <div class="location">Cinema</div>
+        <div class="role">Janitor</div>
+        <h2>All Locations</h2>
+        <div class="locations list"></div>
+        <p><button onclick="GameApp.end()">End Game</button></p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
